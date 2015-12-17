@@ -1,16 +1,12 @@
 web-server:
-  image: almanac/web-server:dev
+  image: almanac/web-server:production
   ports:
    - 80:3000
   links:
    - app-service
-  volumes:
-   - $PWD/almanac-web/:/usr/src/app
 
 app-service:
-  image: almanac/app-service:dev
-  volumes:
-   - $PWD/almanac-app-service/:/usr/src/app
+  image: almanac/app-service:production
 
 data-cache:
   image: redis

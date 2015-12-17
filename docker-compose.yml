@@ -1,0 +1,19 @@
+web-server:
+  image: almanac/web-server:dev
+  ports:
+   - 80:3000
+  links:
+   - app-service
+  volumes:
+   - $PWD/almanac-web/:/usr/src/app
+
+app-service:
+  image: almanac/app-service:dev
+  volumes:
+   - $PWD/almanac-app-service/:/usr/src/app
+
+data-cache:
+  image: redis
+  volumes_from:
+    - cachedb
+  command: redis-server --appendonly yes

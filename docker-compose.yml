@@ -9,8 +9,6 @@ web-server:
 
 app-service:
   image: almanac/app-service:dev
-  volumes:
-   - $PWD/almanac-app-service/:/usr/src/app
 
 data-cache:
   image: redis

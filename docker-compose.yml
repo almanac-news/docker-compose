@@ -17,3 +17,4 @@ data-cache:
   volumes_from:
     - cachedb
   command: redis-server --appendonly yes
+

@@ -2,7 +2,7 @@
 
 ## Production Version
 
-This docker-compose file can be run from any location to boot up and environment from our latest production builds.
+This docker-compose file can be run from any location to boot up an environment from our latest production builds.
 
 **Don't forget to install the Redis data-volume container before running this.** The Redis data-volume is installed by running the following: $ docker create -v /data --name cachedb redis /bin/true
 

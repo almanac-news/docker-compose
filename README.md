@@ -2,7 +2,7 @@
 
 ##Development Version
 
-This docker-compose file is used for **active development** on a Docker container.
+This docker-compose file is used for development on a Docker container **without volumes or hot-module reloading**. For volumes and hot-reloading, see the docker-compose.yml files within specific repos.
 
 It will map volumes to the source directories of the Web Server and App Service containers. This requires a specific directory setup at the location of the `docker-compose.yml` file. In order for the volumes to map correctly, this file must exist in a single directory which also contains both the entire **almanac-app-service** and **almanac-web** repos.
 

@@ -18,4 +18,6 @@ The Redis data-volume is installed by running the following:
 The RethinkDB data-volume is installed by running the following: 
 `$ docker create -v /data --name rtdb rethinkdb /bin/true`
 
+**The RethinkDB admin console is available on Port 8080.**
+
 This will allow Redis' data to persist after containers are shut down. The '*cachedb*' container will remain deactivated in the background to store this data. Don't delete it without the `-v` flag, or the volume will be left dangling and take up disk space.

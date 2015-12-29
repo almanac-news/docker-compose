@@ -4,11 +4,9 @@
 
 This docker-compose file is used for development on a Docker container **without volumes or hot-module reloading**. For volumes and hot-reloading, see the docker-compose.yml files within specific repos.
 
-It will map volumes to the source directories of the Web Server and App Service containers. This requires a specific directory setup at the location of the `docker-compose.yml` file. In order for the volumes to map correctly, this file must exist in a single directory which also contains both the entire **almanac-app-service** and **almanac-web** repos.
+When adding environment variables to the python app service, do **not** use quotes.
 
 In order for the containers to function properly with volumes, the sub-directories must have all dependencies installed. For example, this means that `npm install` must be run in the web directory.
-
-To remove volume mapping, delete the '*volume*' sections of the `yml` file.
 
 **Don't forget to install the Redis and RethinkDB data-volume containers before running this.**
 

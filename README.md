@@ -10,9 +10,12 @@ In order for the containers to function properly with volumes, the sub-directori
 
 To remove volume mapping, delete the '*volume*' sections of the `yml` file.
 
-**Don't forget to install the Redis data-volume container before running this.**
+**Don't forget to install the Redis and RethinkDB data-volume containers before running this.**
 
 The Redis data-volume is installed by running the following: 
 `$ docker create -v /data --name cachedb redis /bin/true`
+
+The RethinkDB data-volume is installed by running the following: 
+`$ docker create -v /data --name rtdb rethinkdb /bin/true`
 
 This will allow Redis' data to persist after containers are shut down. The '*cachedb*' container will remain deactivated in the background to store this data. Don't delete it without the `-v` flag, or the volume will be left dangling and take up disk space.
